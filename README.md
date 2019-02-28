@@ -1,7 +1,7 @@
 # kofo sdk test demo
 
 ```bash
-    npm i
+npm i
 ```
 
 Demo 中实现了 Maker为ETH, Taker为EOS 两个账号跨链交易的sdk调用, taker和maker对应的账号
@@ -15,13 +15,13 @@ TAKER EOS: drunken
 
 ### taker
 ```bash
-    node taker.js
+node taker.js
 ```
 ps: taker数据存储在cache/taker.json
 
 ### maker
 ```bash
-    node maker.js
+node maker.js
 ```
 ps: maker数据存储在cache/maker.json
 
