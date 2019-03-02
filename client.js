@@ -4,7 +4,7 @@ const _ = require('lodash');
 const signUtil = require('./util/sign_util');
 
 
-function run(privateKey, kofoId, clean, roleEnum) {
+function run(privateKey, mqOptions, clean, roleEnum) {
     const cachePath = `${__dirname}/cache/${roleEnum}.json`;
 
     function _read() {
@@ -29,14 +29,10 @@ function run(privateKey, kofoId, clean, roleEnum) {
 
     clean && cleanCache();
     const kofo = Kofo.init({
-        mqUrl: 'ws://pre.corp.kofo.io:30514/mqtt',
-        mqOptions: {
-            kofoId: kofoId,
-            username: 'sub',
-            password: '123'
-        },
-        gateway: "http://pre.corp.kofo.io:30509/gateway",
-        settlement: "http://pre.corp.kofo.io:30509/settlement-server",
+        mqUrl, //联系kofo 工作人员获取
+        mqOptions,
+        gateway, //联系kofo 工作人员获取
+        settlement,//联系kofo 工作人员获取
         insertData,
         readData
     });
