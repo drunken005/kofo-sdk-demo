@@ -15,7 +15,7 @@ const privateKey = {
 };
 
 //username 由 deviceId, kofoId, nonce, overwrite, timestamp 字段按照首字母排序后加上'&'拼接成字符串
-const username = `deviceId=drunken_mac&kofoId=${kofo.kofoId}&nonce=1&overwrite=1&timestamp=${new Date().getTime()}`;
+const username = `deviceId=drunken_mac333&kofoId=${kofo.kofoId}&nonce=1&overwrite=1&timestamp=${new Date().getTime()}`;
 
 //password 由secret对username进行椭圆曲线签名
 const password = Utils.sign(kofo.secret, username);

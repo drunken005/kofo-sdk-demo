@@ -15,22 +15,6 @@ class Identifier {
     get isToken(){
         return Boolean(this.chain !== this.currency);
     }
-
-
-    headers(){
-        return {
-            chain:    this.chain,
-            currency: this.currency,
-        };
-    }
-
-    export(){
-        return {
-            chain:    this.chain,
-            currency: this.currency,
-            isToken:  this.isToken,
-        };
-    }
 }
 
 module.exports = Identifier;

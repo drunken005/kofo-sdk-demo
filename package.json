@@ -12,6 +12,6 @@
     "@zilliqa-js/crypto": "^0.5.0",
     "eosjs-ecc": "^4.0.4",
     "ethers": "^4.0.26",
-    "kofo-sdk": "^1.0.6"
+    "kofo-sdk": "^1.0.9"
   }
 }
