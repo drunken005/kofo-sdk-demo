@@ -1,12 +1,12 @@
 const client = require('./client');
 const Utils = require('kofo-sdk').Utils;
 
-//Utils.createKofoId()
 const kofo = {
-    kofoId: 'KOFOir2cYV9svCmFnhbSySUUDjqNb6BdoFx87pNVapi9UUFi',
-    pubkey: '026dbe727dd7ac0cdf51ac283c5a983ec835942cebaa8d97b8b72fc8420a00c1b9',
-    secret: 'f6d5bfd6abb8d95b345105ca6e36dc10339e8129958304bee5818c1115034ca1'
+    kofoId: 'KOFOtsP1YEhXcm45ieDusRHEx1fDdaBPYCDeqTrqiJj4MJwz',
+    pubkey: '0302abf5ad5528a035227bc2d43990506df15729bf1cdb32f3e096dc489c51e529',
+    secret: 'a4850fbc6e788bf9e66dfc35d4e394290d6047e8ee400f48129f5656c0cb0d66'
 };
+
 
 // maker 对应的 eos 和 eth账号私钥
 const privateKey = {
@@ -20,4 +20,4 @@ const username = `deviceId=drunken_mac333&kofoId=${kofo.kofoId}&nonce=1&overwrit
 //password 由secret对username进行椭圆曲线签名
 const password = Utils.sign(kofo.secret, username);
 
-client.run(privateKey, {kofoId: kofo.kofoId, username, password}, true, 'maker');
+client.run(privateKey, {kofoId: kofo.kofoId, username, password}, false, 'maker');

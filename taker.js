@@ -21,7 +21,7 @@ const username = `deviceId=drunken_mac1&kofoId=${kofo.kofoId}&nonce=1&overwrite=
 const password = Utils.sign(kofo.secret, username);
 
 
-client.run(privateKey, {kofoId: kofo.kofoId, username, password}, true, 'taker');
+client.run(privateKey, {kofoId: kofo.kofoId, username, password}, false, 'taker');
 
 
 

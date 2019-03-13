@@ -29,13 +29,14 @@ function run(privateKey, mqOptions, clean, roleEnum) {
 
     clean && cleanCache();
     const kofo = Kofo.init({
-        mqUrl: 'ws://pre.corp.kofo.io:30520/mqtt', //联系kofo 工作人员获取
+        mqUrl: 'ws://pre.corp.kofo.io:30520/mqtt',
         mqOptions,
-        gateway : 'http://pre.corp.kofo.io:30509/gateway', //联系kofo 工作人员获取
-        settlement: 'http://pre.corp.kofo.io:30509/settlement-server',//联系kofo 工作人员获取
+        gateway : 'http://pre.corp.kofo.io:30509/gateway',
+        // gateway: 'http://127.0.0.1:8080',
+        settlement: 'http://pre.corp.kofo.io:30509/settlement-server',
         insertData,
         readData,
-        // cacheEncrypt: false
+        cacheEncrypt: false
     });
 
 

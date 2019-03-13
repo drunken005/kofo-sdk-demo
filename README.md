@@ -26,3 +26,8 @@ node maker.js
 ps: maker数据存储在cache/maker.json
 
 具体调用参考 [**kofo api**](https://github.com/drunken005/kofo-sdk/blob/master/README.md)
+
+### Create preimage and hvalue
+```bash
+node tx.js
+```
